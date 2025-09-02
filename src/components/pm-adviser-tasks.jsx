@@ -17,7 +17,10 @@ const PMAdviserTasks = () => {
   const statusDropdownRef = useRef(null);
   const filterDropdownRef = useRef(null);
 
-  const STATUS_OPTIONS = ["To Do", "In Progress", "To Review", "Completed", "Missed"];
+  // ✅ Separate status arrays
+  const STATUS_OPTIONS = ["To Do", "In Progress", "To Review"]; // For table status dropdown
+  const FILTER_STATUS_OPTIONS = ["To Do", "In Progress", "To Review", "Completed", "Missed"]; // For filter
+
   const PROJECT_PHASES = ["Planning", "Design", "Development", "Testing", "Deployment", "Review"];
 
   const getStatusColor = (value) => {
@@ -112,7 +115,7 @@ const PMAdviserTasks = () => {
                   <>
                     <div className="dropdown-title">{activeFilterCategory}</div>
                     <hr />
-                    {(activeFilterCategory === "Status" ? STATUS_OPTIONS : PROJECT_PHASES).map(
+                    {(activeFilterCategory === "Status" ? FILTER_STATUS_OPTIONS : PROJECT_PHASES).map(
                       (opt) => (
                         <div
                           key={opt}
@@ -254,7 +257,7 @@ const PMAdviserTasks = () => {
         .search-input {
           border: none;
           outline: none;
-           background: transparent; 
+          background: transparent; 
           font-size: 14px;
           color: #3B0304;
           width: 100%;
