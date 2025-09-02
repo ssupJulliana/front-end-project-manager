@@ -1,6 +1,6 @@
 // src/components/tasks/final-defense-tasks.jsx
 import React, { useState, useEffect, useRef } from "react";
-import OralCreateTasks from "./oral-create-tasks";
+import FinalCreateTasks from "./final-create-tasks";
 import taskIcon from "../../assets/tasks-icon.png";
 import createTasksIcon from "../../assets/create-tasks-icon.png";
 import searchIcon from "../../assets/search-icon.png";
@@ -288,7 +288,7 @@ const FinalDefenseTasks = () => {
           </table>
 
           {isCreateModalOpen && (
-            <OralCreateTasks onClose={() => setIsCreateModalOpen(false)} onCreate={handleCreate} />
+            <FinalCreateTasks onClose={() => setIsCreateModalOpen(false)} onCreate={handleCreate} />
           )}
         </div>
       </div>

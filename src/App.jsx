@@ -11,6 +11,10 @@ import PMTaskAllocation from './components/tasks/pm-task-allocation';
 import PMAdviserTasks from './components/pm-adviser-tasks'; // ✅ Adviser Tasks
 import PMTasksBoard from './components/pm-tasks-board/pm-tasks-board'; // ✅ Tasks Board (renamed & moved)
 import PMTasksRecord from './components/pm-tasks-record/pm-tasks-record'; // ✅ Tasks Record added
+import PMTitleRecord from './components/pm-tasks-record/pm-title-record';
+import PMOralRecord from './components/pm-tasks-record/pm-oral-record';
+import PMFinalRecord from './components/pm-tasks-record/pm-final-record';
+
 
 function App() {
   return (
@@ -38,10 +42,13 @@ function App() {
         <Route path="/task-allocation" element={<PMTaskAllocation />} />
         <Route path="/adviser-tasks" element={<PMAdviserTasks />} />
         <Route path="/tasks-board" element={<PMTasksBoard />} />
-        <Route path="/tasks-record" element={<PMTasksRecord />} /> {/* ✅ Added */}
         <Route path="/title-tasks-record" element={<TasksTitleDefense />} />
         <Route path="/oral-tasks-record" element={<TasksOralDefense />} />
         <Route path="/final-tasks-record" element={<TasksFinalDefense />} />
+         <Route path="/tasks-record" element={<PMTasksRecord />} /> {/* ✅ Added */}
+        <Route path="/pm-title-record" element={<PMTitleRecord />} />
+        <Route path="/pm-oral-record" element={<PMOralRecord />} />
+         <Route path="/pm-final-record" element={<PMFinalRecord />} />
 
         {/* 404 fallback route */}
         <Route path="*" element={<h2 style={{ padding: 20 }}>404 - Page Not Found</h2>} />

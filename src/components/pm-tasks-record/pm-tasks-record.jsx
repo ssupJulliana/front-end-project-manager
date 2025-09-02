@@ -61,7 +61,7 @@ export default function PMTasksRecord() {
 
       <div className="tasks-record-container">
         {/* Title Defense Card */}
-        <div className="task-card" onClick={() => handleCardClick('/title-tasks-record')}>
+        <div className="task-card" onClick={() => handleCardClick('/pm-title-record')}>
           <div className="task-card-icon">
             <img src={recordIcon} alt="Title Defense Icon" className="card-icon" />
           </div>
@@ -71,7 +71,7 @@ export default function PMTasksRecord() {
         </div>
 
         {/* Oral Defense Card */}
-        <div className="task-card" onClick={() => handleCardClick('/oral-tasks-record')}>
+        <div className="task-card" onClick={() => handleCardClick('/pm-oral-record')}>
           <div className="task-card-icon">
             <img src={recordIcon} alt="Oral Defense Icon" className="card-icon" />
           </div>
@@ -81,7 +81,7 @@ export default function PMTasksRecord() {
         </div>
 
         {/* Final Defense Card */}
-        <div className="task-card" onClick={() => handleCardClick('/final-tasks-record')}>
+        <div className="task-card" onClick={() => handleCardClick('/pm-final-record')}>
           <div className="task-card-icon">
             <img src={recordIcon} alt="Final Defense Icon" className="card-icon" />
           </div>
